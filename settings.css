@@ -1,0 +1,38 @@
+.lstc-toggle {
+    padding: 0.125rem .25rem;
+    border-radius: 10rem;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    color:transparent;
+    background: #a53125;
+    min-height: 30px;
+}
+
+.lstc-toggle::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 26px;
+    top:0;
+    left: 0;
+    border-radius: 10rem;
+    background-color: #ffffff;
+    -webkit-transition: .4s;
+    transition: .4s;
+    aspect-ratio: 1;
+}
+
+.lstc-toggle.active {
+    background: #1ECD97;
+}
+
+.lstc-toggle.active::before {
+    left: 100%;
+    transform: translate(-100%);
+}
+
+.lstc-toggle:hover {
+    cursor:pointer;
+}
